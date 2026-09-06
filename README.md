@@ -19,11 +19,11 @@ I build AI agent systems, backend services, and evaluation infrastructure, with 
 
 ## Research Note
 
-### [Auditing Runtime Termination as a Correctness Proxy for Coding Agents](https://github.com/aravelo7/AgentPatchCheck/blob/main/docs/research/runtime-termination-correctness-proxy.md)
+### [Auditing Runtime Termination as a Resolution Proxy: A Frozen Coding-Agent Case Study](https://github.com/aravelo7/AgentPatchCheck/blob/main/docs/research/runtime-termination-correctness-proxy.md)
 
-An artifact-grounded analysis of runtime termination and independent correctness under one frozen coding-agent configuration.
+A follow-up empirical audit derived from APC's frozen fixed-50 runs, examining whether typed runtime termination can substitute for evaluator-derived resolution.
 
-The mechanical proxy `finished → resolved / non-finished → unresolved` misclassified **12/45 graded runs (26.7%)**, showing that runtime termination status should not be treated as a correctness verdict.
+The mechanical proxy `finished → resolved / non-finished → unresolved` disagreed with the official evaluator on **12/45 binary-outcome runs (≈26.7%)**, with errors in both directions. The analysis supports separating runtime telemetry from evaluator verdicts while retaining termination reasons as diagnostic signals.
 
 ## Open Source Contributions
 
