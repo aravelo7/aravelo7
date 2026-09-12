@@ -1,6 +1,15 @@
 # 姚淑慧 / aravelo7
 
-**AI Agent · Backend Engineering**
+**AI Agent · Software Systems · Backend Engineering**
+
+🎓 **2027 Graduate Applicant — Open to graduate research opportunities**
+
+Information Security undergraduate at Hainan University.
+
+Research interests: **AI Agents · Coding Agents · LLM Systems · Intelligent Software Engineering · Agent Security**
+
+> Currently looking for potential graduate advisors and research opportunities for Fall 2027.\
+> 目前正在联系 2027 级推免导师，欢迎 AI Agent、软件系统、智能软件工程及相关交叉方向的老师交流。
 
 I build AI agent systems, backend services, and evaluation infrastructure, with a focus on controlled execution, tool calling, verification, and reliable LLM application engineering.
 
