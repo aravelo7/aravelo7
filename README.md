@@ -1,52 +1,81 @@
 # 姚淑慧 / aravelo7
 
-**AI Agent · Software Systems · Backend Engineering**
-
-🎓 **2027 Graduate Applicant — Open to graduate research opportunities**
+**Software Engineering · AI Agents · Open Source**
 
 Information Security undergraduate at Hainan University.
 
-Research interests: **AI Agents · Coding Agents · LLM Systems · Intelligent Software Engineering · Agent Security**
+I build AI-powered developer tools, backend systems, and evaluation infrastructure, with a focus on **Coding Agents, reliable LLM applications, controlled execution, and software verification**.
 
-> Currently looking for potential graduate advisors and research opportunities for Fall 2027.\
-> 目前正在联系 2027 级推免导师，欢迎 AI Agent、软件系统、智能软件工程及相关交叉方向的老师交流。
-
-I build AI agent systems, backend services, and evaluation infrastructure, with a focus on controlled execution, tool calling, verification, and reliable LLM application engineering.
-
-## Featured Project
+## Featured Projects
 
 ### [AgentPatchCheck](https://github.com/aravelo7/AgentPatchCheck)
 
-**Coding Agent Runtime & Evaluation Harness** for controlled, repository-level software repair.
+**Coding Agent Runtime & Evaluation Harness**
 
-- Built a bounded Agent Runtime with multi-turn tool calling, state management, execution budgets, timeout/cancellation, and typed termination.
-- Added isolated Git workspaces, constrained repository tools, independent verification, execution traces, and evaluation artifacts.
-- Evaluated a frozen HAL SWE-bench Verified Mini fixed-50 configuration with the official evaluator: **35/50 officially resolved**, **50/50 valid executions**, with zero Harness-invalid or grading-invalid runs.
-- Built a local read-only Runtime & Evaluation Console for inspecting real execution traces, verification results, artifacts, and benchmark analysis.
+An open-source platform for controlled, repository-level software repair and independent evaluation.
 
-[View AgentPatchCheck →](https://github.com/aravelo7/AgentPatchCheck)
+- **Agent Runtime:** Bounded agent execution with multi-turn tool calling, state management, execution budgets, timeout handling, and cancellation.
+- **Execution & Verification:** Git worktree isolation, constrained repository tools, independent verification, structured execution traces, and evaluation artifacts.
+- **Evaluation Console:** A read-only interface for exploring agent runs, patches, verification results, and benchmark outcomes.
 
-## Research Note
+**Benchmark:** Achieved **35/50 officially resolved (70.0%)** with **50/50 valid executions** and zero harness-invalid or grading-invalid runs on the frozen HAL SWE-bench Verified Mini fixed-50 set.
 
-### [Auditing Runtime Termination as a Resolution Proxy: A Frozen Coding-Agent Case Study](https://github.com/aravelo7/AgentPatchCheck/blob/main/docs/research/runtime-termination-correctness-proxy.md)
+*Evaluated using deepseek-v4-flash + AgentPatchCheck Runtime/tooling + frozen execution policy. This is not a full SWE-bench Verified score or a model-only result.*
 
-A follow-up empirical audit derived from APC's frozen fixed-50 runs, examining whether typed runtime termination can substitute for evaluator-derived resolution.
+### [MinDisclosure](https://github.com/aravelo7/MinDisclosure)
 
-The mechanical proxy `finished → resolved / non-finished → unresolved` disagreed with the official evaluator on **12/45 binary-outcome runs (≈26.7%)**, with errors in both directions. The analysis supports separating runtime telemetry from evaluator verdicts while retaining termination reasons as diagnostic signals.
+**Task- and Tool-Aware Minimum Disclosure for LLM Agents**
+
+A research-oriented benchmark exploring how LLM agents can minimize sensitive-data exposure while preserving task utility.
+
+- Studies task-aware disclosure representations at Agent and Tool boundaries.
+- Compares raw disclosure, stable tokenization, and oracle minimum-disclosure strategies.
+- Provides a frozen deterministic benchmark and an offline-validated LLM experiment protocol; live-model evaluation results are not yet available.
+
+### [Codex Agent Skills](https://github.com/aravelo7/codex-agent-skills)
+
+**Reusable Skills for AI-Assisted Software Engineering**
+
+A collection of reusable Codex skills for practical software engineering workflows, emphasizing root-cause analysis, minimal changes, explicit error handling, and avoiding unnecessary abstractions.
+
+## Research & Evaluation
+
+### [When Runtime Termination Is Not a Correctness Proxy](https://github.com/aravelo7/AgentPatchCheck/blob/main/docs/research/runtime-termination-correctness-proxy.md)
+
+An empirical analysis based on AgentPatchCheck's frozen benchmark runs.
+
+- Investigated the relationship between agent termination states and independently evaluated software-repair correctness.
+- Found **12/45 disagreements (26.7%)** between a mechanical termination-based classification and official evaluator outcomes.
+- Highlighted the importance of separating runtime completion signals from correctness evaluation.
 
 ## Open Source Contributions
 
-- **LangChain4j** — [#6116: fix(agentic): finalize failed executions after async sibling completion](https://github.com/langchain4j/langchain4j/pull/6116)
-- **Spring AI Alibaba** — [#4911: fix(graph): notify lifecycle listener on streaming errors](https://github.com/alibaba/spring-ai-alibaba/pull/4911)
-- **Spring AI Alibaba** — [#4925: fix(graph): preserve streaming node id in error callbacks](https://github.com/alibaba/spring-ai-alibaba/pull/4925)
-- **MaxKB** — [#5280: fix: sanitize exported chat HTML content](https://github.com/1Panel-dev/MaxKB/pull/5280)
+Selected contributions merged into upstream main branches:
 
-## Tech
+- **LangChain4j**
+  - [#6497](https://github.com/langchain4j/langchain4j/pull/6497) — Preserve dotted parameter names in MCP headers.
+  - [#6116](https://github.com/langchain4j/langchain4j/pull/6116) — Fix failed agent execution finalization with asynchronous sibling completion.
 
-**Backend:** Java · Spring Boot · Spring AI · Node.js
+- **Agentic Spring AI**
+  - [#1](https://github.com/agentic-ai-java/argi-extensions/pull/1) — Fix Redis checkpoint retention behavior.
 
-**AI / Agent:** Agent Runtime · Tool Calling · Agent Evaluation · RAG · MCP · Text2SQL
+- **Spring AI Alibaba**
+  - [#4911](https://github.com/alibaba/spring-ai-alibaba/pull/4911) — Restore lifecycle error notifications for streaming nodes.
+  - [#4925](https://github.com/alibaba/spring-ai-alibaba/pull/4925) — Preserve failing node attribution in streaming error callbacks.
 
-**Data & Infrastructure:** MySQL · PostgreSQL · Redis · Docker · Git
+- **MaxKB**
+  - [#5280](https://github.com/1Panel-dev/MaxKB/pull/5280) — Mitigate XSS risks in exported chat HTML.
 
-**Frontend / Tooling:** TypeScript · React · Vite
+## Tech Stack
+
+**Backend:** Java · Spring Boot · Spring AI · Node.js · Python
+
+**AI / Agent:** Agent Runtime · Tool Calling · MCP · RAG · Text2SQL · Agent Evaluation
+
+**Databases & Infrastructure:** MySQL · PostgreSQL · Redis · Docker · Git
+
+**Frontend & Tooling:** TypeScript · React · Vite
+
+---
+
+*Interested in building reliable AI systems, developer tools, and open-source software.*
